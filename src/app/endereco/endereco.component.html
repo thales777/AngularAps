@@ -1,0 +1,39 @@
+<div *ngFor="let item of enderecos">
+  {{ item.id }}
+  {{ item.rua }}
+  {{ item.bairro }}
+  {{ item.uf }}
+  {{ item.cep }}
+  {{ item.numero }}
+</div>
+
+<form>
+  <div class="form-group">
+    <label for="rua">Endereco</label>
+    <input type="text" class="form-control" id="rua" placeholder="Insira a Rua" 
+    [(ngModel)]="endereco.rua" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="bairro" placeholder="Insira o Bairro" 
+    [(ngModel)]="endereco.bairro" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="uf" placeholder="Insira a UF" 
+    [(ngModel)]="endereco.uf" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="cep" placeholder="Insira o Cep" 
+    [(ngModel)]="endereco.cep" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" id="numero" placeholder="Insira o Numero" 
+    [(ngModel)]="endereco.numero" [ngModelOptions]="{standalone: true}">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)= "metodo()">Submit</button>
+
+  {{ endereco.rua }}
+  {{ endereco.bairro }}
+  {{ endereco.uf }}
+  {{ endereco.cep }}
+  {{ endereco.numero }}
+</form>
